@@ -15,7 +15,7 @@ process SKEWER {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/skewer:0.2.2--hc9558a2_3"
     } else {
-        container "quay.io/biocontainers/skewer:0.2.2--hc9558a2_3"
+        container "${params.containerRegistry}/quay.io/biocontainers/skewer:0.2.2--hc9558a2_3"
     }
 
     input:

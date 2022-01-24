@@ -15,7 +15,7 @@ process MINIMAP2_ALIGN {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/minimap2:2.21--h5bf99c6_0"
     } else {
-        container "quay.io/biocontainers/minimap2:2.21--h5bf99c6_0"
+        container "${params.containerRegistry}/quay.io/biocontainers/minimap2:2.21--h5bf99c6_0"
     }
 
     input:

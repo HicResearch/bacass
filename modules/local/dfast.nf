@@ -15,7 +15,7 @@ process DFAST {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/dfast:1.2.14--h2e03b76_0"
     } else {
-        container "quay.io/biocontainers/dfast:1.2.14--h2e03b76_0"
+        container "${params.containerRegistry}/quay.io/biocontainers/dfast:1.2.14--h2e03b76_0"
     }
 
     input:

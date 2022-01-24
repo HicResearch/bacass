@@ -15,7 +15,7 @@ process PORECHOP {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/porechop:0.2.4--py38hed8969a_1"
     } else {
-        container "quay.io/biocontainers/porechop:0.2.4--py38hed8969a_1"
+        container "${params.containerRegistry}/quay.io/biocontainers/porechop:0.2.4--py38hed8969a_1"
     }
 
     input:

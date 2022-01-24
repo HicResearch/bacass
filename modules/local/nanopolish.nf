@@ -18,7 +18,7 @@ process NANOPOLISH {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/nanopolish:0.13.2--h8cec615_5"
     } else {
-        container "quay.io/biocontainers/nanopolish:0.13.2--h8cec615_5"
+        container "${params.containerRegistry}/quay.io/biocontainers/nanopolish:0.13.2--h8cec615_5"
     }
 
     input:

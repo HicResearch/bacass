@@ -15,7 +15,7 @@ process NANOPLOT {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/nanoplot:1.38.0--pyhdfd78af_0"
     } else {
-        container "quay.io/biocontainers/nanoplot:1.38.0--pyhdfd78af_0"
+        container "${params.containerRegistry}/quay.io/biocontainers/nanoplot:1.38.0--pyhdfd78af_0"
     }
 
     input:

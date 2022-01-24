@@ -15,7 +15,7 @@ process FASTQC {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/fastqc:0.11.9--0"
     } else {
-        container "quay.io/biocontainers/fastqc:0.11.9--0"
+        container "${params.containerRegistry}/quay.io/biocontainers/fastqc:0.11.9--0"
     }
 
     input:

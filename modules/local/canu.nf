@@ -18,7 +18,7 @@ process CANU {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/canu:2.1.1--h1b792b2_2"
     } else {
-        container "quay.io/biocontainers/canu:2.1.1--h1b792b2_2"
+        container "${params.containerRegistry}/quay.io/biocontainers/canu:2.1.1--h1b792b2_2"
     }
 
     input:

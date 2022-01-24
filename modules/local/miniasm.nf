@@ -18,7 +18,7 @@ process MINIASM {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/miniasm:0.3_r179--h5bf99c6_2"
     } else {
-        container "quay.io/biocontainers/miniasm:0.3_r179--h5bf99c6_2"
+        container "${params.containerRegistry}/quay.io/biocontainers/miniasm:0.3_r179--h5bf99c6_2"
     }
 
     input:

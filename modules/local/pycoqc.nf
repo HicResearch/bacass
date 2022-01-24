@@ -15,7 +15,7 @@ process PYCOQC {
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "https://depot.galaxyproject.org/singularity/pycoqc:2.5.2--py_0"
     } else {
-        container "quay.io/biocontainers/pycoqc:2.5.2--py_0"
+        container "${params.containerRegistry}/quay.io/biocontainers/pycoqc:2.5.2--py_0"
     }
 
     input:
